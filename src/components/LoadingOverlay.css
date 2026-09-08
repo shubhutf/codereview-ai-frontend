@@ -1,0 +1,12 @@
+@keyframes scrollbar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-scrollbar {
+  animation: scrollbar 1.2s linear infinite;
+}

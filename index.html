@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        bg: '#070b0c',
+        surface: '#0d1315',
+        surface2: '#111a1c',
+        border: '#1a2628',
+        border2: '#223032',
+        teal: '#00e5c0',
+        teal2: '#00b89a',
+        green: '#39ff8a',
+        red: '#ff4c6a',
+        yellow: '#ffd166',
+        blue: '#4cc9f0',
+        purple: '#b388ff',
+        dim: 'rgba(0,229,192,0.07)',
+        dim2: 'rgba(0,229,192,0.14)',
+      },
+      keyframes: {
+        fadeUp: { '0%': { opacity: 0, transform: 'translateY(20px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+        slideRight: { '0%': { opacity: 0, transform: 'translateX(-24px)' }, '100%': { opacity: 1, transform: 'translateX(0)' } },
+        slideLeft: { '0%': { opacity: 0, transform: 'translateX(24px)' }, '100%': { opacity: 1, transform: 'translateX(0)' } },
+        scaleIn: { '0%': { opacity: 0, transform: 'scale(0.95)' }, '100%': { opacity: 1, transform: 'scale(1)' } },
+        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+        pulse2: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0.4 } },
+        glow: { '0%,100%': { boxShadow: '0 0 8px rgba(0,229,192,0.3)' }, '50%': { boxShadow: '0 0 24px rgba(0,229,192,0.6)' } },
+        scanline: { '0%': { transform: 'translateY(-100%)' }, '100%': { transform: 'translateY(100vh)' } },
+        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
+        spin2: { 'to': { transform: 'rotate(360deg)' } },
+        loadbar: { '0%': { width:'0%' }, '30%': { width:'40%' }, '70%': { width:'75%' }, '90%': { width:'90%' }, '100%': { width:'100%' } },
+        cardHover: { '0%': { transform: 'translateY(0) scale(1)' }, '100%': { transform: 'translateY(-4px) scale(1.01)' } },
+        numberCount: { '0%': { opacity:0, transform:'translateY(10px)' }, '100%': { opacity:1, transform:'translateY(0)' } },
+      },
+      animation: {
+        fadeUp: 'fadeUp 0.5s ease both',
+        fadeIn: 'fadeIn 0.4s ease both',
+        scaleIn: 'scaleIn 0.4s cubic-bezier(0.16,1,0.3,1) both',
+        slideRight: 'slideRight 0.4s ease both',
+        slideLeft: 'slideLeft 0.4s ease both',
+        shimmer: 'shimmer 2s linear infinite',
+        pulse2: 'pulse2 2s ease infinite',
+        glow: 'glow 2s ease infinite',
+        scanline: 'scanline 4s linear infinite',
+        float: 'float 3s ease infinite',
+        spin2: 'spin2 0.7s linear infinite',
+        loadbar: 'loadbar 2.6s cubic-bezier(0.4,0,0.2,1) forwards',
+        numberCount: 'numberCount 0.5s ease both',
+      }
+    }
+  }
+}
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
